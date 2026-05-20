@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}" class="logoName">Tiffany.py</a>
+        <ol>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('development_blog') }}">Development Blog</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        </ol>
+    </nav>
+    <div class="pageLayout">
+        <div class="infoCard">
+            <div class="homeRow1">
+                <div class="introductionParagraph">
+                    <h1>Hello! My name is Tiffany McKenzie</h1>
+                    <p class="introduction">I am a senior at Wilmington University and will be graduating in December 2026. My goal is to become a software engineer. 
+                        Coding is one of my passions, and I enjoy creating games and applications that help automate everyday tasks. I have experience 
+                        programming in Python, C#, HTML, and CSS.</p>  
+                </div>
+            </div>
+            <div class="homeRow2">
+                <h2 class="contactsHeader">GitHub: </h2>
+                <a class="githubLink" target="_blank" href="https://github.com/TiffanyCM">View My GitHub</a>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/home images/portrait.png') }}" alt="profile picture"> 
+    </div>
+</body>
+</html>

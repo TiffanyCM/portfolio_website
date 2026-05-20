@@ -1,0 +1,140 @@
+
+
+body{
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+h1{
+    font-size: 72px;
+    font-family: Arial, sans-serif;
+
+    color: #306998;
+    text-align: left;
+    margin-left: 10%;
+
+    
+}
+
+h2{
+
+    font-size: 30px;
+    text-align: center;
+    color: #306998;
+
+}
+
+
+h3{
+
+    text-align: center;
+    color:#306998;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+
+}
+
+.row1, .row2{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.column1{
+
+    margin-left: 10%;
+
+
+}
+
+
+.projectDescription{
+
+
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;  
+    max-width: 65%;  
+
+}
+
+img{
+
+    width: 40%;
+    max-width: 600px;
+    height: 350px;
+
+    display: block;
+    margin-bottom: 0;
+    margin-right: 10%;
+
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.projectGithubLink{
+
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+
+
+}
+
+.completionDate{
+
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.languageList{
+
+
+    width:30%;
+    height: 15%;
+    font-size: 25px;
+    color:white;
+
+    background-color: #306998;
+    border: 2px;
+    border-radius: 20px; 
+
+    text-align: center;  
+
+
+}
+
+.languageListRow{
+
+    display:flex;
+    justify-content: space-between;
+    max-width: 65%;
+
+}
+
+
+.overviewCard{
+
+    margin-left: 10%;
+    height: auto;
+
+    max-width: 30%;
+    min-width:20%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    background-color: #FFFFFF;    
+
+
+}
+
+.overviewContent{
+
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;  
+    margin-left: 5%;
+    margin-right: 5%;
+
+
+}

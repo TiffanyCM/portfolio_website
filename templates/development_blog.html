@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/development_blog.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="{{ url_for('index') }}" class="logoName">Tiffany.py</a>
+            <ol>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('development_blog') }}">Development Blog</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            </ol>
+        </nav>
+    </body>
+    <h1>
+        <span>Development</span>
+        <span>Blog</span>
+    </h1>
+    <h2>This blog documents my ongoing learning experiences in computer science, along with updates 
+        on my current development projects.</h2>
+
+    <form method="GET" action="{{ url_for('development_blog') }}">
+        <div class="filterRow">
+            <div class="filterGroup">
+                <label for="sort">Sort by:</label>
+                <select id="sort" name="sort">
+                    <option>Newest First</option>
+                    <option>Oldest First</option>
+                </select>
+            </div>
+
+            <span class="divider">|</span>
+
+            <div class="filterGroup">
+                <label for="date">Date:</label>
+                <select id="date" name="date">
+                    <option>All Time</option>
+                    <option>This Year</option>
+                    <option>This Month</option>
+                    <option>Last 30 Days</option>
+                </select>
+            </div>
+
+            <span class="divider">|</span>
+
+            <button class="selectButton" type="submit">Go</button>
+        </div>
+    </form>
+    <div class="blogCard">
+
+        {% for blog in blogs %}
+
+            <div class="blogRow">
+
+                <div class="imageCase">
+                    <img class="blogImage"
+                        src="{{ url_for('static', filename=blog.image) }}"
+                        alt="{{ blog.name }}">
+                </div>
+
+                <div class="blogDescription">
+
+                    <h4 class="blogHeadline">
+                        {{ blog.name }}
+                    </h4>
+
+                    <p>{{ blog.description }}</p>
+
+                    <p><strong>Date:</strong> {{ blog.date }}</p>
+
+                    {% if not loop.first %}
+                        <a class="readMoreButton" href="#">
+                            Read More
+                        </a>
+                    {% endif %}
+                </div>
+
+            </div>
+
+            <hr>
+
+        {% endfor %}
+
+    </div> 
+    <h3>More blog posts coming soon!</h3>
+</body>
+</html>

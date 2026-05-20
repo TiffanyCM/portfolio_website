@@ -1,0 +1,250 @@
+
+
+body{
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+h1{
+    font-size: 72px;
+    font-family: Arial, sans-serif;
+
+    color: #306998;
+    margin-left: 10%;
+
+    
+}
+
+.projectHeadline{
+
+
+    text-align: center;
+    color:#306998;
+    font-size: 60px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    
+}
+
+.projectHeadline:hover{
+
+    text-decoration: underline;
+
+    
+}
+
+
+h2{
+
+    font-size: 30px;
+
+
+    color: #000000;
+    margin-left: 10%;
+    max-width: 40%;
+
+}
+
+
+h3{
+
+    text-align: center;
+    color:#306998;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+
+}
+
+
+.row1{
+
+    margin-left: 5%;
+    max-width: 90%;
+    max-height: 300px;
+    border-color: #000000;
+
+
+}
+
+.sortByRow{
+
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.sortByLabels{
+
+    font-size:20px;
+}
+
+.dropdownList{
+
+    font-size: 20px;
+    margin-right: 5%;
+}
+
+
+.filterRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    width: 80%;
+
+    padding: 20px 0px;
+
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
+    border-radius: 12px;
+    margin-left: 10%;
+}
+
+.filterGroup {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filterGroup label {
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: #002B81;
+}
+
+select,
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #306998;
+    color: white;
+    border-color: #306998;
+}
+
+button:hover,
+select:hover {
+    border-color: #306998;
+}
+
+.divider{
+
+    color:#306998;
+    font-size:36px;
+}
+.selectButton{
+
+    width:100px;
+    margin-right: 50px;
+    
+}
+
+
+.projectsCard{
+
+    width: 80%;
+    margin: 40px auto;
+    margin-left: 10%;
+
+
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
+    border-radius: 12px;
+
+}
+
+.projectRow{
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.imageCase{
+
+    background-color: #f0f0f0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width: 620px;
+    min-height: 320px;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+.projectImage{
+
+    width:100%;
+    max-height:400px;
+    object-fit: cover;
+
+}
+
+.projectDescription{
+
+    flex:1;
+
+}
+
+.projectDescription h2{
+
+    margin-left:0;
+    max-width:100%;
+    color:#306998;
+    font-size: 48px;
+
+}
+
+.projectDescription p{
+
+    font-size:20px;
+    line-height:1.6;
+
+}
+
+hr{
+
+    background-color: #306998;
+    height:2px;
+    border:none;
+
+}
+
+.githubLink{
+
+    color:#306998;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+.githubLink:hover{
+
+    text-decoration:underline;
+
+}
+

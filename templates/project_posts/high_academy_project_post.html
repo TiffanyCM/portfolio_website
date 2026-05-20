@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/project_posts.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="{{ url_for('index') }}" class="logoName">Tiffany.py</a>
+            <ol>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('development_blog') }}">Development Blog</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            </ol>
+        </nav>
+        
+        <h1>High Academy</h1>
+        <div class="row1">
+            <div class="column1">
+                <p class="projectDescription">High Academy is my senior project for Wilmington University. Currently, High Academy features Algebra I and 
+                    Trigonometry courses. Each course consists of seven lessons that students can learn from and three quizzes they can complete. 
+                </p>
+                
+                <a class="projectGithubLink" href="https://github.com/TiffanyCM/High-Academy">View GitHub repository </a>
+                <p class="completionDate">Completed: May 2026</p>
+                <div class="languageListRow">
+                    <div class="languageList">
+                        Python
+                    </div>
+                    <div class="languageList">
+                        Flask
+                    </div>
+                    <div class="languageList">
+                        HTML/CSS
+                    </div>
+                </div>
+            </div>    
+            <img src = "{{ url_for('static', filename='images/project images/high academy images/high_academy_home_image.png') }}", alt = "High Academy home image">
+        </div>
+        <br>
+        <div class="row2">
+            <div class="overviewCard">
+                <h2>Overview</h2>
+                <p class="overviewContent">This project uses Flask; a Python web framework used for developing websites and web applications. Since this was my first time using Flask,
+                    there was a noticeable learning curve. Through this project, I gained a deeper understanding of how web design involves not only displaying
+                    information on an HTML page but also creating visually engaging and user-friendly experiences.</p>
+                <p class="overviewContent">After developing 46 HTML, CSS, and Python files, I was able to successfully complete the project. In the future, I hope to continue creating 
+                    creative and user-friendly web applications using Flask.</p>    
+                
+            </div>
+            <img src = "{{ url_for('static', filename='images/project images/high academy images/high_academy_quiz_image.png') }}", alt = "High Academy home image">
+
+        </div>
+
+
+
+
+</html>

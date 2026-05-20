@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}" class="logoName">Tiffany.py</a>
+        <ol>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('development_blog') }}">Development Blog</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        </ol>
+    </nav>
+    <h1>Projects</h1>
+    <h2>Below is a collection of projects I have completed and projects currently in development.</h2>
+
+    <form method="GET" action="{{ url_for('projects') }}">
+        <div class="filterRow">
+            <div class="filterGroup">
+                <label for="sort">Sort by:</label>
+                <select id="sort" name="sort">
+                    <option>Newest First</option>
+                    <option>Oldest First</option>
+                    <option>A-Z</option>
+                    <option>Z-A</option>
+                </select>
+            </div>
+
+            <span class="divider">|</span>
+
+            <div class="filterGroup">
+                <label for="language">Language:</label>
+                <select id="language" name="language">
+                    <option>All</option>
+                    <option>Python</option>
+                    <option>HTML/CSS</option>
+                    <option>C#</option>
+                </select>
+            </div>
+
+            <span class="divider">|</span>
+
+            <div class="filterGroup">
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option>All</option>
+                    <option>Completed</option>
+                    <option>In Progress</option>
+                </select>
+            </div>
+
+            <span class="divider">|</span>
+
+            <div class="filterGroup">
+                <label for="date">Date:</label>
+                <select id="date" name="date">
+                    <option>All Time</option>
+                    <option>This Year</option>
+                    <option>This Month</option>
+                    <option>Last 30 Days</option>
+                </select>
+            </div>
+
+            <span class="divider">|</span>
+
+            <button class="selectButton" type="submit">Go</button>
+        </div>
+    </form>
+
+    <div class="projectsCard">
+
+        {% for project in projects %}
+
+            <div class="projectRow">
+
+                <div class="imageCase">
+                    <img class="projectImage"
+                        src="{{ url_for('static', filename=project.image) }}"
+                        alt="{{ project.name }}">
+                </div>
+
+                <div class="projectDescription">
+                    
+                    <h2>{{ project.name }}</h2>
+                    <p>{{ project.description }}</p>
+                    <p><strong>Language:</strong> {{ project.language | join(", ") }}</p>
+                    <p><strong>Status:</strong> {{ project.status }}</p>
+                    <p>
+                        <strong>Github Link:</strong>
+                        <a class="githubLink"
+                        href="{{ project.github }}"
+                        target="_blank">
+                        View Repository
+                        </a>
+                    </p>            
+                    <p>
+                        <strong>Date:</strong>
+
+                        {% if project.date is none %}
+                            -----
+                        {% else %}
+                            {{ project.date }}
+                        {% endif %}
+                    </p>
+                </div>
+
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+    <h3>More projects coming soon!</h3>
+
+
+</body>
+</html>
