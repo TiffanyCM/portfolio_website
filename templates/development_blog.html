@@ -71,8 +71,9 @@
 
                     <p><strong>Date:</strong> {{ blog.date }}</p>
 
-                    {% if not loop.first %}
-                        <a class="readMoreButton" href="#">
+                    {% if blog.link == "csharp_inventory_management_post" %}
+                        <a class="readMoreButton"
+                        href="{{ url_for(blog.link) }}">
                             Read More
                         </a>
                     {% endif %}

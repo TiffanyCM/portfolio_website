@@ -36,10 +36,25 @@ projects_list = [
         "image": "images/project images/high academy images/high_academy_home_image.png"
     }
 
+
+
+
 ]
 
 
 blog_list = [
+
+    
+    {
+        "name": "C# Inventory Management App Part 1",
+        "description": "This week, I plan on starting an inventory management application for a grocery store using C#. This project will demonstrate my current skills as I continue learning GUI design.",
+        "date": "05-24-2026",
+        "image": "images/blog list images/grocery_store_image.jpeg",
+        "link": "csharp_inventory_management_post"
+    }
+
+    ,
+
 
     {
         "name": "Hello World!",
@@ -48,6 +63,9 @@ blog_list = [
         "image": "images/blog list images/HelloWorld.png",
         "link": "hello_world_post"
     }
+
+
+
 ]
 
 
@@ -174,12 +192,13 @@ def development_blog():
     return render_template("development_blog.html", blogs=blog_list)
 
 
-@app.route("/project_posts/high_academy_project_post")
 
-def high_academy_project_post():
-    
-    return render_template("project_posts/high_academy_project_post.html")
 
+@app.route("/blog_posts/blog_post_5_24_2026")
+
+def csharp_inventory_management_post():
+
+    return render_template("project_posts/blog_post_5_24_2026.html")
 
 
 

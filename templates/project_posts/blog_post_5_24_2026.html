@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog_posts.css') }}">
+</head>
+
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}" class="logoName">Tiffany.py</a>
+        <ol>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('development_blog') }}">Development Blog</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        </ol>
+    </nav>
+
+    <main class="blogPostContainer">
+        <a class="backLink" href="{{ url_for('development_blog') }}">← Back to Development Blog</a>
+
+        <article class="blogPostCard">
+            <p class="blogDate">Development Blog</p>
+
+            <h1>C# Inventory Management App</h1>
+
+            <p>
+                This week, I plan on starting an inventory management application for a grocery store using C#.
+                I have not done a project in C# on this website as of yet, so this will demonstrate my current
+                skills as I learn more about GUI designs.
+            </p>
+
+            <h2>Grocery Store Categories</h2>
+
+            <div class="categoryGrid">
+                <span>Produce</span>
+                <span>Fruits</span>
+                <span>Vegetables</span>
+                <span>Canned Goods</span>
+                <span>Dairy</span>
+                <span>Meat</span>
+                <span>Fish & Seafood</span>
+                <span>Deli</span>
+                <span>Condiments & Spices</span>
+                <span>Snacks</span>
+                <span>Bread & Bakery</span>
+                <span>Beverages</span>
+                <span>Pasta, Rice & Cereal</span>
+                <span>Baking</span>
+                <span>Frozen Foods</span>
+                <span>Personal Care</span>
+                <span>Health Care</span>
+                <span>Household & Cleaning Supplies</span>
+                <span>Baby Items</span>
+                <span>Pet Care</span>
+            </div>
+
+            <h2>Item Characteristics</h2>
+
+            <ul class="itemList">
+                <li>Item name</li>
+                <li>Brand</li>
+                <li>Description</li>
+                <li>Weight</li>
+                <li>Product ID</li>
+                <li>Price</li>
+                <li>Perishable / expiration date</li>
+                <li>Image</li>
+            </ul>
+
+            <p>
+                I plan on making the application in the terminal first, then making the user interface.
+            </p>
+        </article>
+    </main>
+</body>
+</html>
